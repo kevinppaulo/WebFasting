@@ -1,0 +1,30 @@
+section {
+  min-height: calc(100vh - 80px);
+}
+
+header {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  background: rgb(254, 168, 239);
+  background: linear-gradient(
+    337deg,
+    rgb(255 140 140) 0%,
+    rgb(253 206 101) 100%
+  );
+  z-index: 1;
+}
+
+header #ongoing-fast-card, #new-fast-card {
+  transform: translateY(50%);
+}
+
+#scroll-down-indicator{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -4rem);
+}
