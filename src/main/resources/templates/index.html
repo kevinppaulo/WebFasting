@@ -70,7 +70,7 @@
           <section class="container">
             <h4 class="center-align">Your previous fasts</h4>
             <br>
-            <table>
+            <table class="responsive-table highlight">
               <thead>
                 <tr>
                   <th>Start</th>
@@ -87,8 +87,8 @@
                   <td th:text="${fast.intendedDuration} +' hours'"></td>
                   <td th:text="${fast.duration}"></td>
                   <td>
-                    <a th:href="@{/delete} + '?uuid=' + ${fast.uuid}" class="delete-link waves-effect waves-dark red lighten-5 red-text btn-small">
-                      <i class="material-icons left">delete</i>delete</a>
+                    <a th:href="@{/delete} + '?uuid=' + ${fast.uuid}" class="delete-link  red-text ">
+                      <i class="material-icons left">delete</i></a>
                   </td>
                 </tr>
               </tbody>

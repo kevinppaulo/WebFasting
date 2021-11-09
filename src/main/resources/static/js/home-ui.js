@@ -5,13 +5,15 @@ var instances = M.FormSelect.init(elems);
 const startFastingBtn = document.getElementById("start-fasting-btn");
 const startFastingForm = document.getElementById("start-fasting-form");
 
-startFastingBtn.onclick = function () {
-  if(instances[0].getSelectedValues().filter(Boolean).length){
-    startFastingForm.submit();
-  }else{
-    M.toast({text: 'Please, select a fasting length'});
-  }
-};
+if(startFastingBtn){
+  startFastingBtn.onclick = function () {
+    if(instances[0].getSelectedValues().filter(Boolean).length){
+      startFastingForm.submit();
+    }else{
+      M.toast({text: 'Please, select a fasting length'});
+    }
+  };
+}
 
 function endFast() {
   Swal.fire({
